@@ -10,13 +10,26 @@ import UIKit
 
 class LoginViewController: UIViewController {
     //MARK: - Properties
-    
+    private let welcomeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "HEY, WELCOME"
+        label.font = .boldSystemFont(ofSize: 20)
+        label.tintColor = .black
+        return label
+    }()
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        title = "Login"
+        configureUI()
     }
     
     //MARK: - Helpers
+    private func configureUI() {
+        view.backgroundColor = .white
+
+        view.addSubview(welcomeLabel)
+        welcomeLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
+        welcomeLabel.centerX(inView: view)
+    }
 }
