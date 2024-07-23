@@ -18,6 +18,14 @@ class LoginViewController: UIViewController {
         return label
     }()
 
+    private let profileImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = #imageLiteral(resourceName: "profile")
+        iv.contentMode = .scaleAspectFit
+        iv.setDimensions(height: 50, width: 50)
+        return iv
+    }()
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +39,9 @@ class LoginViewController: UIViewController {
         view.addSubview(welcomeLabel)
         welcomeLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
         welcomeLabel.centerX(inView: view)
+
+        view.addSubview(profileImageView)
+        profileImageView.anchor(top: welcomeLabel.bottomAnchor, paddingTop: 20)
+        profileImageView.centerX(inView: view)
     }
 }
