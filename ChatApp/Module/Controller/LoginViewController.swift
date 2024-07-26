@@ -45,6 +45,38 @@ class LoginViewController: UIViewController {
         return tf
     }()
 
+    private lazy var loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Login", for: .normal)
+        button.tintColor = .white
+        button.backgroundColor = .black
+        button.setHeight(50)
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = .boldSystemFont(ofSize: 19)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var forgetPasswordButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Forget your password? Get help signing in", for: .normal)
+        button.tintColor = .black
+        button.setHeight(20)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleForgetPassword), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var signUpButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Don't have an account? Sign up", for: .normal)
+        button.tintColor = .black
+        button.setHeight(20)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleSignUpButton), for: .touchUpInside)
+        return button
+    }()
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +95,27 @@ class LoginViewController: UIViewController {
         profileImageView.anchor(top: welcomeLabel.bottomAnchor, paddingTop: 20)
         profileImageView.centerX(inView: view)
 
-        let stackView = UIStackView(arrangedSubviews: [emailTF, passwordTF])
+        let stackView = UIStackView(arrangedSubviews: [emailTF, passwordTF, loginButton, forgetPasswordButton])
         stackView.axis = .vertical
         stackView.spacing = 20
 
         view.addSubview(stackView)
         stackView.anchor(top: profileImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingRight: 30)
+
+        view.addSubview(signUpButton)
+        signUpButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        signUpButton.centerX(inView: view)
+    }
+
+    @objc func handleLogin() {
+        print("Login!")
+    }
+
+    @objc func handleForgetPassword() {
+
+    }
+
+    @objc func handleSignUpButton() {
+
     }
 }
