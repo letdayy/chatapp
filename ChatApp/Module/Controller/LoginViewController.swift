@@ -77,6 +77,26 @@ class LoginViewController: UIViewController {
         return button
     }()
 
+    private let contLabel: UILabel = {
+        let label = UILabel()
+        label.text = "or continue with Google"
+        label.tintColor = .lightGray
+        label.font = .systemFont(ofSize: 14)
+        return label
+    }()
+
+    private lazy var googleButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Google", for: .normal)
+        button.tintColor = .white
+        button.backgroundColor = .black
+        button.setDimensions(height: 50, width: 150)
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = .boldSystemFont(ofSize: 19)
+        button.addTarget(self, action: #selector(handleGoogleSignIn), for: .touchUpInside)
+        return button
+    }()
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +125,12 @@ class LoginViewController: UIViewController {
         view.addSubview(signUpButton)
         signUpButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
         signUpButton.centerX(inView: view)
+
+        view.addSubview(contLabel)
+        contLabel.centerX(inView: view, topAnchor: forgetPasswordButton.bottomAnchor, paddingTop: 30)
+
+        view.addSubview(googleButton)
+        googleButton.centerX(inView: view, topAnchor: contLabel.bottomAnchor, paddingTop: 12)
     }
 
     @objc func handleLogin() {
@@ -118,4 +144,9 @@ class LoginViewController: UIViewController {
     @objc func handleSignUpButton() {
 
     }
+
+    @objc func handleGoogleSignIn() {
+
+    }
 }
+
