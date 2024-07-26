@@ -26,6 +26,25 @@ class LoginViewController: UIViewController {
         return iv
     }()
 
+    private let emailTF: UITextField = {
+        let tf = UITextField()
+        tf.tintColor = .black
+        tf.setHeight(50)
+        tf.placeholder = "Email"
+        tf.backgroundColor = .lightGray
+        return tf
+    }()
+
+
+    private let passwordTF: UITextField = {
+        let tf = UITextField()
+        tf.tintColor = .black
+        tf.setHeight(50)
+        tf.placeholder = "Password"
+        tf.backgroundColor = .lightGray
+        return tf
+    }()
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,5 +62,12 @@ class LoginViewController: UIViewController {
         view.addSubview(profileImageView)
         profileImageView.anchor(top: welcomeLabel.bottomAnchor, paddingTop: 20)
         profileImageView.centerX(inView: view)
+
+        let stackView = UIStackView(arrangedSubviews: [emailTF, passwordTF])
+        stackView.axis = .vertical
+        stackView.spacing = 20
+
+        view.addSubview(stackView)
+        stackView.anchor(top: profileImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingRight: 30)
     }
 }
