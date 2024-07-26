@@ -16,6 +16,7 @@
 		B051F6C22C3C04DF00DB29D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F6C12C3C04DF00DB29D6 /* LoginViewController.swift */; };
 		B051F6C42C3C053000DB29D6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F6C32C3C053000DB29D6 /* RegisterViewController.swift */; };
 		B061712A2C50323300573571 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171292C50323300573571 /* Views.swift */; };
+		B061712D2C53368000573571 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061712C2C53368000573571 /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B051F6C12C3C04DF00DB29D6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B051F6C32C3C053000DB29D6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B06171292C50323300573571 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		B061712C2C53368000573571 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B06171292C50323300573571 /* Views.swift */,
+				B061712C2C53368000573571 /* Buttons.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B061712D2C53368000573571 /* Buttons.swift in Sources */,
 				B051F6C22C3C04DF00DB29D6 /* LoginViewController.swift in Sources */,
 				B051F6C42C3C053000DB29D6 /* RegisterViewController.swift in Sources */,
 				B061712A2C50323300573571 /* Views.swift in Sources */,
