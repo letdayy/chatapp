@@ -28,24 +28,8 @@ class LoginViewController: UIViewController {
         return iv
     }()
 
-    private let emailTF: UITextField = {
-        let tf = UITextField()
-        tf.tintColor = .black
-        tf.setHeight(50)
-        tf.placeholder = "Email"
-        tf.backgroundColor = .lightGray.withAlphaComponent(0.5)
-        return tf
-    }()
-
-
-    private let passwordTF: UITextField = {
-        let tf = UITextField()
-        tf.tintColor = .black
-        tf.setHeight(50)
-        tf.placeholder = "Password"
-        tf.backgroundColor = .lightGray.withAlphaComponent(0.5)
-        return tf
-    }()
+    private let emailTF = CustomeTextField(placeholder: "Email", keyboardType: .emailAddress)
+    private let passwordTF = CustomeTextField(placeholder: "Password", isSecure: true)
 
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)

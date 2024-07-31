@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomeTextField: UITextField {
-    init(placehouder: String, keyboardType: UIKeyboardType = .default, isSecure: Bool = false) {
+    init(placeholder: String, keyboardType: UIKeyboardType = .default, isSecure: Bool = false) {
         super.init(frame: .zero)
 
         borderStyle = .none
@@ -20,6 +20,8 @@ class CustomeTextField: UITextField {
 
         self.keyboardType = keyboardType
         isSecureTextEntry = isSecure
+
+        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.7)])
     }
 
     required init?(coder: NSCoder) {
