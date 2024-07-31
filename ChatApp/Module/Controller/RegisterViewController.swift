@@ -17,6 +17,15 @@ class RegisterViewController: UIViewController {
         return button
     }()
 
+    private lazy var plushPhotoButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "plus_photo"), for: .normal)
+        button.setDimensions(height: 140, width: 140)
+        button.tintColor = .lightGray
+        button.addTarget(self, action: #selector(handlePlushButton), for: .touchUpInside)
+        return button
+    }()
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +39,16 @@ class RegisterViewController: UIViewController {
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
         alreadyHaveAccountButton.centerX(inView: view)
+
+        view.addSubview(plushPhotoButton)
+        plushPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 30)
     }
 
     @objc func handleAlreadyHaveAccountButton() {
+
+    }
+
+    @objc func handlePlushButton() {
 
     }
 }
