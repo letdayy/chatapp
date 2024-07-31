@@ -132,7 +132,8 @@ class LoginViewController: UIViewController {
     }
 
     @objc func handleSignUpButton() {
-
+        let controller = RegisterViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 
     @objc func handleGoogleSignIn() {
