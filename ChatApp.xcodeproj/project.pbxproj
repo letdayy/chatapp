@@ -17,6 +17,7 @@
 		B051F6C42C3C053000DB29D6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F6C32C3C053000DB29D6 /* RegisterViewController.swift */; };
 		B061712A2C50323300573571 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171292C50323300573571 /* Views.swift */; };
 		B061712D2C53368000573571 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061712C2C53368000573571 /* Buttons.swift */; };
+		B061712F2C5AAE2300573571 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061712E2C5AAE2300573571 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B051F6C32C3C053000DB29D6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B06171292C50323300573571 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		B061712C2C53368000573571 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		B061712E2C5AAE2300573571 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		B051F6BD2C3C027C00DB29D6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B061712E2C5AAE2300573571 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				B051F6C22C3C04DF00DB29D6 /* LoginViewController.swift in Sources */,
 				B051F6C42C3C053000DB29D6 /* RegisterViewController.swift in Sources */,
 				B061712A2C50323300573571 /* Views.swift in Sources */,
+				B061712F2C5AAE2300573571 /* LoginViewModel.swift in Sources */,
 				B051F6AA2C3C024600DB29D6 /* ViewController.swift in Sources */,
 				B051F6A62C3C024600DB29D6 /* AppDelegate.swift in Sources */,
 				B051F6A82C3C024600DB29D6 /* SceneDelegate.swift in Sources */,
