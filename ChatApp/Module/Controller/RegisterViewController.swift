@@ -26,6 +26,11 @@ class RegisterViewController: UIViewController {
         return button
     }()
 
+    private var emailTF = CustomeTextField(placeholder: "Email", keyboardType: .emailAddress)
+    private var passwordTF = CustomeTextField(placeholder: "Password", isSecure: true)
+    private var fullnameTF = CustomeTextField(placeholder: "Fullname")
+    private var usernameTF = CustomeTextField(placeholder: "Username")
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +47,13 @@ class RegisterViewController: UIViewController {
 
         view.addSubview(plushPhotoButton)
         plushPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 30)
+
+        let stackView = UIStackView(arrangedSubviews: [emailTF, passwordTF, fullnameTF, usernameTF])
+        stackView.axis = .vertical
+        stackView.spacing = 20
+
+        view.addSubview(stackView)
+        stackView.anchor(top: plushPhotoButton.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingRight: 30)
     }
 
     @objc func handleAlreadyHaveAccountButton() {
