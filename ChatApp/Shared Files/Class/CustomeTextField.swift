@@ -11,6 +11,11 @@ class CustomeTextField: UITextField {
     init(placeholder: String, keyboardType: UIKeyboardType = .default, isSecure: Bool = false) {
         super.init(frame: .zero)
 
+        let spacer = UIView()
+        spacer.setDimensions(height: 50, width: 12)
+        leftView = spacer
+        leftViewMode = .always
+
         borderStyle = .none
         textColor = .black
         keyboardAppearance = .light
