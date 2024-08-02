@@ -85,7 +85,10 @@ class RegisterViewController: UIViewController {
     }
 
     @objc func handlePlushButton() {
-
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true)
     }
 
     @objc func handleSignUp() {
@@ -110,5 +113,19 @@ class RegisterViewController: UIViewController {
         signUpButton.isEnabled = viewModel.formIsFaild
         signUpButton.backgroundColor = viewModel.backgroundColor
         signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+    }
+}
+
+
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.editedImage] as? UIImage else { return }
+
+        plushPhotoButton.layer.cornerRadius = plushPhotoButton.frame.width / 2
+        plushPhotoButton.layer.masksToBounds = true
+        plushPhotoButton.layer.borderColor = UIColor.black.cgColor
+        plushPhotoButton.setImage(selectedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        dismiss(animated: true)
     }
 }
