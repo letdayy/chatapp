@@ -81,7 +81,7 @@ class RegisterViewController: UIViewController {
     }
 
     @objc func handleAlreadyHaveAccountButton() {
-
+        navigationController?.popViewController(animated: true)
     }
 
     @objc func handlePlushButton() {
