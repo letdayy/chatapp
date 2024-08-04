@@ -19,6 +19,8 @@
 		B061712D2C53368000573571 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061712C2C53368000573571 /* Buttons.swift */; };
 		B061712F2C5AAE2300573571 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061712E2C5AAE2300573571 /* LoginViewModel.swift */; };
 		B06171322C5ABA9E00573571 /* CustomeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171312C5ABA9E00573571 /* CustomeTextField.swift */; };
+		B06171342C5FCF3F00573571 /* CustomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171332C5FCF3F00573571 /* CustomeLabel.swift */; };
+		B06171362C5FD07F00573571 /* CustomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171352C5FD07F00573571 /* CustomeImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B061712C2C53368000573571 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		B061712E2C5AAE2300573571 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B06171312C5ABA9E00573571 /* CustomeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTextField.swift; sourceTree = "<group>"; };
+		B06171332C5FCF3F00573571 /* CustomeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeLabel.swift; sourceTree = "<group>"; };
+		B06171352C5FD07F00573571 /* CustomeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				B06171312C5ABA9E00573571 /* CustomeTextField.swift */,
+				B06171332C5FCF3F00573571 /* CustomeLabel.swift */,
+				B06171352C5FD07F00573571 /* CustomeImageView.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -238,7 +244,9 @@
 			files = (
 				B061712D2C53368000573571 /* Buttons.swift in Sources */,
 				B051F6C22C3C04DF00DB29D6 /* LoginViewController.swift in Sources */,
+				B06171362C5FD07F00573571 /* CustomeImageView.swift in Sources */,
 				B051F6C42C3C053000DB29D6 /* RegisterViewController.swift in Sources */,
+				B06171342C5FCF3F00573571 /* CustomeLabel.swift in Sources */,
 				B061712A2C50323300573571 /* Views.swift in Sources */,
 				B06171322C5ABA9E00573571 /* CustomeTextField.swift in Sources */,
 				B061712F2C5AAE2300573571 /* LoginViewModel.swift in Sources */,

@@ -12,36 +12,17 @@ class LoginViewController: UIViewController {
     //MARK: - Properties
     var viewModel = LoginViewModel()
 
-    private let welcomeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "HEY, WELCOME"
-        label.font = .boldSystemFont(ofSize: 20)
-        label.tintColor = .black
-        return label
-    }()
+    private let welcomeLabel = CustomeLabel(text: "HEY, WELCOME", labelFont: .boldSystemFont(ofSize: 20))
 
-    private let profileImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "profile")
-        iv.contentMode = .scaleAspectFit
-        iv.setDimensions(height: 50, width: 50)
-        return iv
-    }()
+    private let profileImageView = CustomeImageView(image: #imageLiteral(resourceName: "profile"), width: 50, height: 50)
 
     private let emailTF = CustomeTextField(placeholder: "Email", keyboardType: .emailAddress)
     private let passwordTF = CustomeTextField(placeholder: "Password", isSecure: true)
 
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Login", for: .normal)
-        button.tintColor = .white
-        button.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        button.setTitleColor(UIColor(white: 1, alpha: 0.7), for: .normal)
-        button.setHeight(50)
-        button.layer.cornerRadius = 5
-        button.titleLabel?.font = .boldSystemFont(ofSize: 19)
+        button.blackButton(buttonText: "Login")
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
-        button.isEnabled = false
         return button
     }()
 
@@ -61,13 +42,7 @@ class LoginViewController: UIViewController {
         return button
     }()
 
-    private let contLabel: UILabel = {
-        let label = UILabel()
-        label.text = "or continue with Google"
-        label.textColor = .lightGray
-        label.font = .systemFont(ofSize: 14)
-        return label
-    }()
+    private let contLabel = CustomeLabel(text: "or continue with Google", labelColor: .lightGray)
 
     private lazy var googleButton: UIButton = {
         let button = UIButton(type: .system)
