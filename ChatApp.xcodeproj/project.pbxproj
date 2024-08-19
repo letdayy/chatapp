@@ -22,6 +22,8 @@
 		B06171322C5ABA9E00573571 /* CustomeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171312C5ABA9E00573571 /* CustomeTextField.swift */; };
 		B06171342C5FCF3F00573571 /* CustomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171332C5FCF3F00573571 /* CustomeLabel.swift */; };
 		B06171362C5FD07F00573571 /* CustomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171352C5FD07F00573571 /* CustomeImageView.swift */; };
+		B0B968202C7197B70035FF60 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9681F2C7197B70035FF60 /* AuthServices.swift */; };
+		B0B968232C7384320035FF60 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B968222C7384320035FF60 /* Constants.swift */; };
 		F6928A974AF6CFD5E4DD6FAD /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7428FDBBBF890532F441CA /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		B06171312C5ABA9E00573571 /* CustomeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTextField.swift; sourceTree = "<group>"; };
 		B06171332C5FCF3F00573571 /* CustomeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeLabel.swift; sourceTree = "<group>"; };
 		B06171352C5FD07F00573571 /* CustomeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeImageView.swift; sourceTree = "<group>"; };
+		B0B9681F2C7197B70035FF60 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
+		B0B968222C7384320035FF60 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BCFEE62843D2404A47F09E3B /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,7 @@
 		B051F6BB2C3C026900DB29D6 /* Shared Files */ = {
 			isa = PBXGroup;
 			children = (
+				B0B968212C7384290035FF60 /* Constants */,
 				B06171302C5ABA8B00573571 /* Class */,
 				B06171282C50321D00573571 /* Extensions */,
 			);
@@ -175,6 +180,7 @@
 		B051F6C02C3C028C00DB29D6 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B0B9681F2C7197B70035FF60 /* AuthServices.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				B06171352C5FD07F00573571 /* CustomeImageView.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		B0B968212C7384290035FF60 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B0B968222C7384320035FF60 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +331,11 @@
 				B061712D2C53368000573571 /* Buttons.swift in Sources */,
 				B051F6C22C3C04DF00DB29D6 /* LoginViewController.swift in Sources */,
 				B06171362C5FD07F00573571 /* CustomeImageView.swift in Sources */,
+				B0B968202C7197B70035FF60 /* AuthServices.swift in Sources */,
 				B051F6C42C3C053000DB29D6 /* RegisterViewController.swift in Sources */,
 				B06171342C5FCF3F00573571 /* CustomeLabel.swift in Sources */,
 				B061712A2C50323300573571 /* Views.swift in Sources */,
+				B0B968232C7384320035FF60 /* Constants.swift in Sources */,
 				B06171322C5ABA9E00573571 /* CustomeTextField.swift in Sources */,
 				B061712F2C5AAE2300573571 /* LoginViewModel.swift in Sources */,
 				B051F6AA2C3C024600DB29D6 /* ViewController.swift in Sources */,
