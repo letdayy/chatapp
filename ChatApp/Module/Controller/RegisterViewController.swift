@@ -87,15 +87,20 @@ class RegisterViewController: UIViewController {
     }
 
     @objc func handleSignUp() {
-        guard let email = emailTF.text else { return }
-        guard let password = emailTF.text else { return }
-        guard let username = emailTF.text else { return }
-        guard let fullname = emailTF.text else { return }
+        guard let email = emailTF.text?.lowercased() else { return }
+        guard let password = passwordTF.text else { return }
+        guard let username = usernameTF.text?.lowercased() else { return }
+        guard let fullname = fullnameTF.text else { return }
         guard let profileImage = profileImage else { return }
 
         let credential = AuthCredential(email: email, password: password, username: username, fullname: fullname, profileImage: profileImage)
 
-        AuthServices.registerUser(credential: credential)
+        AuthServices.registerUser(credential: credential) { error in
+            if let error = error {
+                print("error \(error.localizedDescription)")
+                return
+            }
+        }
     }
 
     @objc func handleTextField(sender: UITextField) {
