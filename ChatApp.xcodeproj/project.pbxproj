@@ -24,6 +24,7 @@
 		B06171362C5FD07F00573571 /* CustomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171352C5FD07F00573571 /* CustomeImageView.swift */; };
 		B0B968202C7197B70035FF60 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9681F2C7197B70035FF60 /* AuthServices.swift */; };
 		B0B968232C7384320035FF60 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B968222C7384320035FF60 /* Constants.swift */; };
+		B0B968252C739D9B0035FF60 /* FileUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B968242C739D9B0035FF60 /* FileUploader.swift */; };
 		F6928A974AF6CFD5E4DD6FAD /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7428FDBBBF890532F441CA /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		B06171352C5FD07F00573571 /* CustomeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeImageView.swift; sourceTree = "<group>"; };
 		B0B9681F2C7197B70035FF60 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		B0B968222C7384320035FF60 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B0B968242C739D9B0035FF60 /* FileUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploader.swift; sourceTree = "<group>"; };
 		BCFEE62843D2404A47F09E3B /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				B0B9681F2C7197B70035FF60 /* AuthServices.swift */,
+				B0B968242C739D9B0035FF60 /* FileUploader.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				B061712A2C50323300573571 /* Views.swift in Sources */,
 				B0B968232C7384320035FF60 /* Constants.swift in Sources */,
 				B06171322C5ABA9E00573571 /* CustomeTextField.swift in Sources */,
+				B0B968252C739D9B0035FF60 /* FileUploader.swift in Sources */,
 				B061712F2C5AAE2300573571 /* LoginViewModel.swift in Sources */,
 				B051F6AA2C3C024600DB29D6 /* ViewController.swift in Sources */,
 				B051F6A62C3C024600DB29D6 /* AppDelegate.swift in Sources */,

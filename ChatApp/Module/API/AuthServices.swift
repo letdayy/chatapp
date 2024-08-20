@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseFirestoreInternal
+import FirebaseAuth
 
 struct AuthCredential {
     let email: String
@@ -22,6 +22,8 @@ struct AuthServices {
     }
 
     static func registerUser(credential: AuthCredential) {
-        Firestore.firestore().collection("")
+        FileUploader.uploadImage(image: credential.profileImage) { imageURL in
+            print("ImageURL: \(imageURL)")
+        }
     }
 }

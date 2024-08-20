@@ -94,6 +94,8 @@ class RegisterViewController: UIViewController {
         guard let profileImage = profileImage else { return }
 
         let credential = AuthCredential(email: email, password: password, username: username, fullname: fullname, profileImage: profileImage)
+
+        AuthServices.registerUser(credential: credential)
     }
 
     @objc func handleTextField(sender: UITextField) {
