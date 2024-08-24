@@ -22,6 +22,7 @@
 		B06171322C5ABA9E00573571 /* CustomeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171312C5ABA9E00573571 /* CustomeTextField.swift */; };
 		B06171342C5FCF3F00573571 /* CustomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171332C5FCF3F00573571 /* CustomeLabel.swift */; };
 		B06171362C5FD07F00573571 /* CustomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06171352C5FD07F00573571 /* CustomeImageView.swift */; };
+		B0A4D55F2C7A78BF003A90C6 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4D55E2C7A78BF003A90C6 /* ConversationViewController.swift */; };
 		B0B968202C7197B70035FF60 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9681F2C7197B70035FF60 /* AuthServices.swift */; };
 		B0B968232C7384320035FF60 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B968222C7384320035FF60 /* Constants.swift */; };
 		B0B968252C739D9B0035FF60 /* FileUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B968242C739D9B0035FF60 /* FileUploader.swift */; };
@@ -48,6 +49,7 @@
 		B06171312C5ABA9E00573571 /* CustomeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTextField.swift; sourceTree = "<group>"; };
 		B06171332C5FCF3F00573571 /* CustomeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeLabel.swift; sourceTree = "<group>"; };
 		B06171352C5FD07F00573571 /* CustomeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeImageView.swift; sourceTree = "<group>"; };
+		B0A4D55E2C7A78BF003A90C6 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		B0B9681F2C7197B70035FF60 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		B0B968222C7384320035FF60 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0B968242C739D9B0035FF60 /* FileUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploader.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		B051F6BC2C3C027100DB29D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B0A4D55D2C7A78AD003A90C6 /* Chat */,
 				B051F6C12C3C04DF00DB29D6 /* LoginViewController.swift */,
 				B051F6C32C3C053000DB29D6 /* RegisterViewController.swift */,
 			);
@@ -205,6 +208,14 @@
 				B06171352C5FD07F00573571 /* CustomeImageView.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		B0A4D55D2C7A78AD003A90C6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B0A4D55E2C7A78BF003A90C6 /* ConversationViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		B0B968212C7384290035FF60 /* Constants */ = {
@@ -333,6 +344,7 @@
 			files = (
 				B061712D2C53368000573571 /* Buttons.swift in Sources */,
 				B051F6C22C3C04DF00DB29D6 /* LoginViewController.swift in Sources */,
+				B0A4D55F2C7A78BF003A90C6 /* ConversationViewController.swift in Sources */,
 				B06171362C5FD07F00573571 /* CustomeImageView.swift in Sources */,
 				B0B968202C7197B70035FF60 /* AuthServices.swift in Sources */,
 				B051F6C42C3C053000DB29D6 /* RegisterViewController.swift in Sources */,

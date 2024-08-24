@@ -99,7 +99,20 @@ class LoginViewController: UIViewController {
     }
 
     @objc func handleLogin() {
-        print("Login!")
+        guard let email = emailTF.text?.lowercased() else { return }
+        guard let password = passwordTF.text else { return }
+
+        AuthServices.loginUser(withEmail: email, withPassword: password) { Result, error in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+                return
+            }
+            print("Succ Login!!")
+            let controller = ConversationViewController()
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true)
+        }
     }
 
     @objc func handleForgetPassword() {
