@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol RegisterVC_Delegate: AnyObject {
+    func didSuccCreateAccount(_ vc: RegisterViewController)
+}
+
 class RegisterViewController: UIViewController {
     //MARK: - Properties
+    weak var delegate: RegisterVC_Delegate?
+
     var viewModel = RegisterViewModel()
 
     private lazy var alreadyHaveAccountButton: UIButton = {
@@ -95,12 +101,16 @@ class RegisterViewController: UIViewController {
 
         let credential = AuthCredential(email: email, password: password, username: username, fullname: fullname, profileImage: profileImage)
 
+        showLoader(true)
         AuthServices.registerUser(credential: credential) { error in
+            self.showLoader(false)
             if let error = error {
-                print("error \(error.localizedDescription)")
+                self.showMessage(title: "Error", message: error.localizedDescription)
                 return
             }
         }
+
+        delegate?.didSuccCreateAccount(self)
     }
 
     @objc func handleTextField(sender: UITextField) {
