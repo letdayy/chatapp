@@ -7,6 +7,7 @@
 
 import UIKit
 import JGProgressHUD
+import SDWebImage
 
 extension UIViewController {
     static let hud = JGProgressHUD(style: .dark)
@@ -29,5 +30,17 @@ extension UIViewController {
         }))
 
         present(alert, animated: true)
+    }
+
+    func getImage(withImageURL imageURL: URL, completion: @escaping(UIImage) -> Void){
+        SDWebImageManager.shared.loadImage(with: imageURL, options: .continueInBackground, progress: nil) {image, data, error, cashType, finished, url  in
+            if let error = error {
+                self.showMessage(title: "Error", message: error.localizedDescription)
+                return
+            }
+
+            guard let image = image else { return }
+            completion(image)
+        }
     }
 }

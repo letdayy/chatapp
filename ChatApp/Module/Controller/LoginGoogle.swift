@@ -129,6 +129,26 @@ extension LoginViewController{
 //MARK: Login user info
 extension LoginViewController {
     func updateUserInfo() {
-        print("Succ Login with Google!!")
+        guard let user = Auth.auth().currentUser else { return }
+
+        guard let email = user.email,
+              let fullname = user.displayName,
+              let photoURL = user.photoURL else { return }
+
+        let uid = user.uid
+        let username = fullname.replacingOccurrences(of: " ", with: "").lowercased()
+
+        getImage(withImageURL: photoURL) { image in
+            let credential = AuthCredentialEmail(email: email, uid: uid, username: username, fullname: fullname, profileImage: image)
+
+            AuthServices.registerWithGoogle(credential: credential) { error in
+                if let error = error {
+                    self.showMessage(title: "Error", message: error.localizedDescription)
+                    return
+                }
+
+                print("Succ create to firestore")
+            }
+        }
     }
 }
