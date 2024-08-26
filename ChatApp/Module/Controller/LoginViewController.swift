@@ -126,7 +126,7 @@ class LoginViewController: UIViewController {
     }
 
     @objc func handleGoogleSignIn() {
-
+        setupGoogle()
     }
 
     @objc func handleTextChanged(sender: UITextField) {
